@@ -6,12 +6,12 @@ var DinnerModel = function() {
 
 
 	this.setNumberOfGuests = function(num) {
-		//TODO Lab 2
+	    guests = num;
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
-		//TODO Lab 2
+	    return guest;
 	}
 
 	//Returns the dish that is on the menu for selected type 
@@ -76,6 +76,7 @@ var DinnerModel = function() {
 		}
 	}
 
+	var guests = 0;
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
