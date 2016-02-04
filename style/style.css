@@ -1,8 +1,39 @@
 .navbar-default {
     background-color: #E1F15D;
-    border-color: #e7e7e7;
+    border-color: #9A9A9A;
+    
+    background: rgba(225, 241, 93, 0.7);
 }
 
-body { 
-background-image: url("images/family.jpg");
+body {
+    background-image: url("../images/family.jpg");
+    background-color: #cccccc;
+    no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+
+
+.smvertcont {
+    margin: 50px;
+    padding-bottom: 40px;
+    background-color: #EDEDED;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background: rgba(225, 255, 255, 0.8);
+
+
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #AF9C9C;
 }
