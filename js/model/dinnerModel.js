@@ -16,33 +16,60 @@ var DinnerModel = function() {
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
-		//TODO Lab 2
+	    for(dish in menu){
+	        if(dish.type == type){
+	            return menu[dish].id;
+	        }
+	    }
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		//TODO Lab 2
+	    return $(menu).id;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//TODO Lab 2
+	    return $(menu).each(function(){
+	        return this.getDish(menu.id).ingredient;
+	    });
+
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-		//TODO Lab 2
+	    
+	    var menuIngredients = this.getAllingrediants();
+	    var totalPrice;
+
+	    for(ingrediant in menuIngredients){
+	        totalPrice += menuIngredients[ingrediant].quantity * menuIngredients[ingrediant].price;
+	    }
+	    return totalPrice;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		//TODO Lab 2 
-	}
+	    for (dish in menu) {
+	        if (dish.type == this.getDish(id).type) {
+	            if (menu[dish].id == 0) {
+	                menu[dish].id = id;
+	            }
+	            else {
+	                this.removeDishFromMenu(id);
+	                menu[dish].id = id;
+	            }
+	        }
+	    }
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
-		//TODO Lab 2
+	    for (dish in menu) {
+	        if (dish.type == this.getDish(id).type) {
+	            menu[dish].id = 0;
+	        }
+	    }
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
@@ -52,7 +79,7 @@ var DinnerModel = function() {
 	  return $(dishes).filter(function(index,dish) {
 		var found = true;
 		if(filter){
-			found = false;
+			found = false;  
 			$.each(dish.ingredients,function(index,ingredient) {
 				if(ingredient.name.indexOf(filter)!=-1) {
 					found = true;
@@ -77,6 +104,7 @@ var DinnerModel = function() {
 	}
 
 	var guests = 0;
+	var menu = [{ 'type': 'starter', 'id' : 0 }, { 'type': 'main dish', 'id' : 0 }, {'type' : 'dessert', 'id' : 0}];
 
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,
