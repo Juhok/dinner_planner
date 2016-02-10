@@ -27,7 +27,27 @@ body {
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
     background: rgba(225, 255, 255, 0.8);
+}
 
+.smvertcontselect {
+    /* margin: 50px; */
+    margin-top: -20px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background-color: #EDEDED;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background: rgba(225, 255, 255, 0.8);
+}
+
+.mvertcontselect {
+    margin-top: -20px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background-color: #EDEDED;
+    background: rgba(225, 255, 255, 0.8);
 
 }
 

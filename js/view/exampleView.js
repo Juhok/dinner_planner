@@ -7,9 +7,13 @@ var ExampleView = function (container, model) {
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
 	
-	model.setNumberOfGuests(5);
+	model.setNumberOfGuests(9);
 
 	this.numberOfGuests.html(model.getNumberOfGuests());
+
+	//next view 
+
+	// getalldisches to the select
 
 
 
