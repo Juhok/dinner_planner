@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juhos and Martin's Dinner planner</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HOMELETTE</a> <h3> <small> From the best chefs in the world directly into your kitchen </small>  
+    </h3>
+  </div>
+</nav>
+
+<div class="row">
+ <div class="col-xs-12 col-md-2 smvertcontselect">
+  <h2>My Dinner</h2>
+
+
+  <ul class="list-inline">
+    <li><h4>People</h4></li>
+    <li>
+
+      <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+      </select>
+
+    </li>
+  </ul>  
+
+  <hr>
+
+  <ul class="list-inline">
+    <li><h4>Dish Name</h4></li>
+    <li><h4>People</h4></li>
+  </ul>
+
+  <ul class="list-inline">
+    <li><p>Pending</p></li>
+    <li><p>0.00</p></li>
+  </ul>
+
+  <hr>
+
+  <ul class="list-inline">
+    <li><p>SEK</p></li>
+    <li><p>0.00</p></li>
+  </ul>
+
+  <br />
+
+  <input class="btn btn-default" type="button" value="Confirm Dinner">
+
+  <br />
+  <br />
+
+  <div id="exampleView">
+   <div>
+    Number of guests: <span id="numberOfGuests"></span>
+  </div>
+  <div>
+    <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+    <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+  </div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-8 mvertcontselect">
+
+  <h2>Lasagne</h2>
+
+
+  <div class="row">
+    <div class="col-md-6">
+
+
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="images/lasagne.jpg"></iframe>
+      </div>
+
+      <p>
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+
+
+     </p>
+
+     <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
+     <input class="btn btn-default" type="button" value="back to Select Dish">
+
+   </div>
+   <div class="col-md-6">
+
+
+    <div class="panel panel-default" >
+      <!-- Default panel contents -->
+      <div class="panel-heading"><h4>Ingredients for 4 people</h4></div>
+
+      <!-- Table -->
+      <table class="table">
+        <tr>
+          <td>2tbsp</td>
+          <td>Olive Oil</td> 
+          <td>SEK</td>
+          <td>0.20</td>
+        </tr>
+        <tr>
+          <td>750 g</td>
+          <td>Chicken Breat</td> 
+          <td>SEK</td>
+          <td>10.00</td>
+        </tr>
+      </table>
+    </div>
+
+
+    <input class="btn btn-default" type="button" value="Confirm Dish">
+
+  </div>
+</div>
+
+
+<h2>Preparation</h2>
+
+ <p>
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+
+
+     </p>
+
+</div>
+</div>
+</div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+<script src="js/model/dinnerModel.js"></script>
+<script src="js/view/exampleView.js"></script>
+<script src="js/view/exampleViewController.js"></script>
+</body>
+</html>

@@ -1,148 +1,222 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Juhos and Martin's Dinner planner</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juhos and Martin's Dinner planner</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style/style.css">
 
+</head>
+<body>
 
-  </head>
-  <body>
-
-<nav class="navbar navbar-default">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">HOMELETTE</a> <h3> <small> From the best chefs in the world directly into your kitchen </small>  </h3>
-  </div>
-</nav>
-
-
-<div class="row">
-
-
- 
-
-	<div class="col-xs-12 col-md-2 smvertcontselect">
-		<h2>My Dinner</h2>
-		
-		<hr>
-		
-		<p>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-
-		</p>
-
-		
-
-		<br />
-
-		<h4>Start quickly!</h4>
-
-		<input class="btn btn-default" type="button" value="Confirm Dinner">
-
-		<br />
-		<br />
-
-		<div id="exampleView">
-			<div>
-				Number of guests: <span id="numberOfGuests"></span>
-			</div>
-			<div>
-          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-			</div>
-		</div>
-	</div>
-
- <div class="col-xs-12 col-sm-12 col-md-8 mvertcontselect">
-
- 	 	<h2>Select Dish</h2>
- 	 	<hr>
-
-<form class="form-inline">
-  
-<div class="col-lg-3 col-md-6 col-xs-12">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-</div><!-- /.col-lg-3 -->
-
-
-
-  <div class="btn-group">
-  
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-
-
-</form>
-<hr>
-
-<br />
-  
-
-
-		<p>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-
-		</p>
-<br />
-
-
-<div class="container-fluid">
-    <div class="row">
-            <div class="col-lg-2 col-md-6">One
-                <img src="images/meatballs.jpg" alt="Mountain View" style="">
-            </div>
-            <div class="col-lg-2 col-md-6">Two
-                <img src="images/sourdough.jpg" alt="Mountain View" style="">
-            </div>
-            <div class="col-lg-2 col-md-6">Three
-                 <img src="images/icecream.jpg" alt="Mountain View" style="">
-            </div>
-            <div class="col-lg-2 col-md-6">Four
-                 <img src="images/toast.jpg" alt="Mountain View" style="">
-            </div>
-            <div class="col-lg-2 col-md-6">Five
-                 <img src="images/meatballs.jpg" alt="Mountain View" style="">
-            </div>     
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">HOMELETTE</a> <h3> <small> From the best chefs in the world directly into your kitchen </small>  </h3>
     </div>
+  </nav>
+
+  <div class="row">
+
+   <div class="col-xs-12 col-md-2 smvertcontselect">
+    <h2>My Dinner</h2>
+
+    <ul class="list-inline">
+      <li><h4>People</h4></li>
+      <li>
+
+        <select class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
+          <option>17</option>
+          <option>18</option>
+          <option>19</option>
+          <option>20</option>
+        </select>
+
+      </li>
+    </ul>  
+
+    <hr>
+
+    <ul class="list-inline">
+      <li><h4>Dish Name</h4></li>
+      <li><h4>People</h4></li>
+    </ul>
+
+    <ul class="list-inline">
+      <li><p>Pending</p></li>
+      <li><p>0.00</p></li>
+    </ul>
+
+    <hr>
+
+    <ul class="list-inline">
+      <li><p>SEK</p></li>
+      <li><p>0.00</p></li>
+    </ul>
+
+
+
+
+    <br />
+
+
+
+    <input class="btn btn-default" type="button" value="Confirm Dinner">
+
+    <br />
+    <br />
+
+    <div id="exampleView">
+     <div>
+      Number of guests: <span id="numberOfGuests"></span>
+    </div>
+    <div>
+      <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+      <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-8 mvertcontselect">
+
+  <h2>Select Dish</h2>
+  <hr>
+
+  <form class="form-inline">
+
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
+
+
+
+    <div class="btn-group">
+
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Main
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Desert</a></li>
+        <li><a href="#">Appetite</a></li>
+        <li><a href="#">Drink</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Special</a></li>
+      </ul>
+    </div>
+
+
+  </form>
+  <hr>
+
+  <br />
+  
+
+
+  <p>
+   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+
+ </p>
+ <br />
+
+
+ <div class="row">
+  <div class="col-lg-2 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <a href="#" class="thumbnail">
+        <img src="images/meatballs.jpg" alt="Mountain View">
+      </a>
+      <div class="caption">
+        <h3>Lasagne</h3>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-2 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <a href="#" class="thumbnail">
+        <img src="images/icecream.jpg" alt="Mountain View">
+      </a>
+      <div class="caption">
+        <h3>Meatballs</h3>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <a href="#" class="thumbnail">
+        <img src="images/toast.jpg" alt="Mountain View">
+      </a>
+      <div class="caption">
+        <h3>Soda</h3>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <a href="#" class="thumbnail">
+        <img src="images/meatballs.jpg" alt="Mountain View">
+      </a>
+      <div class="caption">
+        <h3>Milk</h3>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2 col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <a href="#" class="thumbnail">
+        <img src="images/sourdough.jpg" alt="Mountain View">
+      </a>
+      <div class="caption">
+        <h3>Toast</h3>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
 </div>
 
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
-
-
- </div>
-</div>
-
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
-  </body>
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+<script src="js/model/dinnerModel.js"></script>
+<script src="js/view/exampleView.js"></script>
+<script src="js/view/exampleViewController.js"></script>
+</body>
 </html>

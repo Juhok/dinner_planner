@@ -1,76 +1,66 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Juhos and Martin's Dinner planner</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Juhos and Martin's Dinner planner</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
 
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">HOMELETTE</a> <h3> <small> From the best chefs in the world directly into your kitchen </small>  </h3>
+		</div>
+	</nav>
 
-  </head>
-  <body>
+	<div class="row">
 
-<nav class="navbar navbar-default">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">HOMELETTE</a> <h3> <small> From the best chefs in the world directly into your kitchen </small>  </h3>
-  </div>
-</nav>
+		<div class="col-md-6 smvertcont">
+			<h2>A Home Dinner Service</h2>
 
+			<hr>
 
-<div class="row">
- 
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
 
-	<div class="col-md-6 smvertcont">
-		<h2>A Home Dinner Service</h2>
-		
-		<hr>
-		
-		<p>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+			</p>
+			<br />
+			<h4>Start quickly!</h4>
 
-		</p>
+			<input class="btn btn-default" type="button" value="Create new dinner">
 
-		
+			<br />
+			<br />
 
-		<br />
-
-		<h4>Start quickly!</h4>
-
-		<input class="btn btn-default" type="button" value="Create new dinner">
-
-		<br />
-		<br />
-
-		<div id="exampleView">
-			<div>
-				Number of guests: <span id="numberOfGuests"></span>
-			</div>
-			<div>
-          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+			<div id="exampleView">
+				<div>
+					Number of guests: <span id="numberOfGuests"></span>
+				</div>
+				<div>
+					<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+					<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+				</div>
 			</div>
 		</div>
+
+	</div>
+	<div class="col-md-6">
+
 	</div>
 
-
-</div>
- <div class="col-md-6">
-
- </div>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
 	<!-- The application JavaScript code -->
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
-  </body>
+</body>
 </html>
