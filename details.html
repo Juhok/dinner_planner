@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -94,56 +94,61 @@
 
 <div class="col-xs-12 col-sm-12 col-md-8 mvertcontselect">
 
+
   <h2>Lasagne</h2>
 
 
   <div class="row">
-    <div class="col-md-6">
+      <div id="detailsView">
+          <div class="col-md-6">
+
+              <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="images/lasagne.jpg"></iframe>
+              </div>
+
+              <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                  standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              </p>
+
+              
+              <div>
+                  <button id = "backToSelectDish" input class="btn btn-default">
+                  <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> Back to selected dish </button>
+              </div>
+
+          </div>
+          <div class="col-md-6">
 
 
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="images/lasagne.jpg"></iframe>
+              <div class="panel panel-default">
+                  <!-- Default panel contents -->
+                  <div class="panel-heading"><h4>Ingredients for 4 people</h4></div>
+
+                  <!-- Table -->
+                  <table class="table">
+                      <tr>
+                          <td>2 tsp</td>
+                          <td>Olive Oil</td>
+                          <td>SEK</td>
+                          <td>0.20</td>
+                      </tr>
+                      <tr>
+                          <td>750 g</td>
+                          <td>Chicken Breat</td>
+                          <td>SEK</td>
+                          <td>10.00</td>
+                      </tr>
+                  </table>
+              </div>
+
+
+              <input class="btn btn-default" type="button" value="Confirm Dish">
+          </div>
       </div>
-
-      <p>
-       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-
-
-     </p>
-
-     <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
-     <input class="btn btn-default" type="button" value="back to Select Dish">
-
-   </div>
-   <div class="col-md-6">
-
-
-    <div class="panel panel-default" >
-      <!-- Default panel contents -->
-      <div class="panel-heading"><h4>Ingredients for 4 people</h4></div>
-
-      <!-- Table -->
-      <table class="table">
-        <tr>
-          <td>2tbsp</td>
-          <td>Olive Oil</td> 
-          <td>SEK</td>
-          <td>0.20</td>
-        </tr>
-        <tr>
-          <td>750 g</td>
-          <td>Chicken Breat</td> 
-          <td>SEK</td>
-          <td>10.00</td>
-        </tr>
-      </table>
-    </div>
-
-
-    <input class="btn btn-default" type="button" value="Confirm Dish">
-
   </div>
-</div>
 
 
 <h2>Preparation</h2>

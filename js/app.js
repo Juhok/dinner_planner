@@ -6,6 +6,7 @@ $(function() {
 	
 
 	var exampleView = new ExampleView($("#exampleView"), model);
+	var detailsView = new DetailsView($("#detailsView"), model);
 
 
 

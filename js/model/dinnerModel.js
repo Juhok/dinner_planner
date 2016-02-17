@@ -64,6 +64,7 @@ var DinnerModel = function () {
                 }
             }
         }
+    }
 
         //Removes dish from menu
         this.removeDishFromMenu = function (id) {
@@ -359,4 +360,3 @@ var DinnerModel = function () {
         ];
 
     }
-}
