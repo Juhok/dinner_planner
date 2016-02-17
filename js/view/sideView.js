@@ -1,8 +1,21 @@
 //ExampleView Object constructor
 var SideView = function (container, model) {
 	
-	// Get all the relevant elements of the view (ones that show data
-  	// and/or ones that responed to interaction)
+
+    this.dishCost = container.find("#dishCost");
+    this.totalCost = container.find("#totalCost");
+
+
+    model.addDishToMenu(101);
+
+    model.setNumberOfGuests(2);
+
+    this.dishCost.html(model.getNumberOfGuests());
+
+    this.totalCost.html(model.testFunction());
+
+    
+
 	
     // View 2/6
     // Implement in Screen for Select and Screen for Details

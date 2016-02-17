@@ -7,6 +7,12 @@ var DinnerModel = function () {
     var guests = 0;
     var menu = [{ 'type': 'starter', 'id': 0 }, { 'type': 'main dish', 'id': 0 }, { 'type': 'dessert', 'id': 0 }];
 
+    var totalMenuPrice = 500;
+
+    this.testFunction = function () {
+        return totalMenuPrice;
+    }
+
     this.setNumberOfGuests = function (num) {
         guests = num;
     }
@@ -105,7 +111,6 @@ var DinnerModel = function () {
             }
         }
 
-        
         
 
         // the dishes variable contains an array of all the 
