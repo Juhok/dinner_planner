@@ -11,9 +11,8 @@ var ExampleView = function (container, model) {
 
 	this.numberOfGuests.html(model.getNumberOfGuests());
 
-	//next view 
-
-	// getalldisches to the select
+    // View 1/6
+    // Implement in Screen for index (Home)
 
 
 

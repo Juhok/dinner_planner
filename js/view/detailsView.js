@@ -6,23 +6,10 @@ var DetailsView = function (container, model) {
 
     this.backToSelectDish = container.find("#backToSelectDish");
     
-    this.tableSpoon = container.find("#tableSpoons");
-
-    model.addDishToMenu(1); //Frensh toast, starter
-    model.addDishToMenu(201); //Vanilla ice-cream, dessert
-    model.addDishToMenu(100); //Meat balls, main dish
-
-    this.tableSpoon.html(model.getDish(201).)
-
 	
-	// TODO:
+    // View 4/6
+    // Implement in Screens for Details
 	
-	// - Ingrediants for specific dish
-	// - Preparation for specific dish
-	// - Image for specific dish
-	
-	
-
 
 }
  
