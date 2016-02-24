@@ -4,28 +4,29 @@ var DinnerModel = function () {
     //TODO Lab 2 implement the data structure that will hold number of guest
     // and selected dinner options for dinner menu
 
-    var guests = 0;
-    var menu = [{ 'type': 'starter', 'id': 0 }, { 'type': 'main dish', 'id': 0 }, { 'type': 'dessert', 'id': 0 }];
+    var guests = 1;
+    var menu = [{ 'type': 'starter', 'id': 0 }, { 'type': 'main dish', 'id': 0 }, { 'type': 'dessert', 'id': 0 }]; // Menu array with dish objects
 
-    var totalMenuPrice = 500;
 
     this.testFunction = function () {
-        return totalMenuPrice;
+        return this.getDishCost(101);
     }
-
+    
+    // Sets the number of guests
     this.setNumberOfGuests = function (num) {
         guests = num;
     }
 
-    // should return 
+    // should return number of guests
     this.getNumberOfGuests = function () {
         return guests;
     }
 
     //Returns the dish that is on the menu for selected type 
     this.getSelectedDish = function (type) {
+
         for (dish in menu) {
-            if (dish.type == type) {
+            if (menu[dish].type == type) {
                 return menu[dish].id;
             }
         }
@@ -33,50 +34,67 @@ var DinnerModel = function () {
 
     //Returns all the dishes on the menu.
     this.getFullMenu = function () {
-        return $(menu).id;
+        return $(menu['id']).toString();
+
     }
 
     //Returns all ingredients for all the dishes on the menu.
     this.getAllIngredients = function () {
-        return $(menu).each(function () {
-            return this.getDish(menu.id).ingredient;
-        });
+        
+        var starterI;
+        var mainDishI;
+        var dessertI;
 
+
+        var menuIngredients = [{ 'starter': starterI }, { 'main dish': mainDishI }, { 'dessert': dessertI}];
+
+        if (menu[0].id != 0) {
+            starterI = this.getDish(menu[0].id).ingredient;
+        }
+
+        if (menu[1].id != 0) {
+            mainDishI = this.getDish(menu[1].id).ingredients;
+        }
+        if (menu[2].id != 0) {
+            dessertI = this.getDish(menu[2].id).ingredients;
+        }
+
+        return this.getDish(menu[1].id).ingrediant;
     }
 
     //Returns the total price of the menu (all the ingredients multiplied by number of guests).
     this.getTotalMenuPrice = function () {
 
-        var menuIngredients = this.getAllingrediants();
-        var totalPrice;
+        var totalCost = 0;
 
-        for (ingrediant in menuIngredients) {
-            totalPrice += menuIngredients[ingrediant].quantity * menuIngredients[ingrediant].price;
+        for (dish in menu) {
+            totalCost += this.getDishCost(menu[dish].id);
+
         }
-        return totalPrice;
+        return totalCost;
     }
 
     //Adds the passed dish to the menu. If the dish of that type already exists on the menu
     //it is removed from the menu and the new one added.
     this.addDishToMenu = function (id) {
-        for (dish in menu) {
-            if (dish.type == this.getDish(id).type) {
-                if (menu[dish].id == 0) {
-                    menu[dish].id = id;
-                }
-                else {
-                    this.removeDishFromMenu(id);
-                    menu[dish].id = id;
-                }
+
+        var thisType = (this.getDish(id)).type;
+        var newKey;
+        for (key in menu) {
+            if (menu[key].type == thisType) {
+                newKey = key;
+                break;
             }
         }
+        menu[newKey].id = id;
+
     }
 
         //Removes dish from menu
-        this.removeDishFromMenu = function (id) {
-            for (dish in menu) {
-                if (dish.type == this.getDish(id).type) {
-                    menu[dish].id = 0;
+    this.removeDishFromMenu = function (id) {
+        for (dish in menu) {
+            if (dish.type == this.getDish(id).type) {
+                menu[dish].id = 0;
                 }
             }
         }
@@ -109,6 +127,23 @@ var DinnerModel = function () {
                     return dishes[key];
                 }
             }
+        }
+        // function that returns the price of a dish depending on the number of guests
+        this.getDishCost = function (id) {
+
+            var cost = 0;
+
+            for (dish in dishes) {
+                if (dishes[dish].id == id) {
+                    for (ingrediant in dishes[dish].ingredients) {
+                        cost += dishes[dish].ingredients[ingrediant].price;
+                    }
+                    cost *= guests;
+                    return cost;
+                }
+              
+            }
+            return cost;
         }
 
         
