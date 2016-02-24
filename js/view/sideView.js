@@ -14,6 +14,7 @@ var SideView = function (container, model) {
     this.dishCost.html(model.getDishCost(101));
     this.totalCost.html(model.getTotalMenuPrice());
 
+
     // View 2/6
     // Implement in Screen for Select and Screen for Details
 
