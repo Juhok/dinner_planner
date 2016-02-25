@@ -1,6 +1,8 @@
 //ExampleView Object constructor
 var DetailsView = function (container, model) {
-	var row = " <tr> <td>Olive Oil</td> </tr>";
+	var row =  "<tr> <td>750 g</td> <td>Chicken Breast</td> <td>SEK</td> <td>10.00</td> </tr> <tr> <td>100 ml</td> <td>Tomato Sauce</td> <td>SEK</td> <td>5.00</td> </tr> <tr> <td>250 g</td> <td>Mozzarella Cheese</td> <td>SEK</td> <td>15.00</td> </tr> <tr> <td>300 g</td> <td>Lasagne Shells</td> <td>SEK</td> <td>20.00</td> </tr>";
+
+	
 
 	// Get all the relevant elements of the view (ones that show data
     // and/or ones that responed to interaction)
