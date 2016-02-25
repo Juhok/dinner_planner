@@ -1,8 +1,19 @@
 //ExampleView Object constructor
 var DetailsView = function (container, model) {
-	var row =  "<tr> <td>750 g</td> <td>Chicken Breast</td> <td>SEK</td> <td>10.00</td> </tr> <tr> <td>100 ml</td> <td>Tomato Sauce</td> <td>SEK</td> <td>5.00</td> </tr> <tr> <td>250 g</td> <td>Mozzarella Cheese</td> <td>SEK</td> <td>15.00</td> </tr> <tr> <td>300 g</td> <td>Lasagne Shells</td> <td>SEK</td> <td>20.00</td> </tr>";
 
-	
+    var row;
+
+    model.addDishToMenu(1);
+
+    var ingredients = model.getIngredient('starter');
+
+    for (ingredient in ingredients) {
+        row += "<tr>"
+        for (detail in ingredients[ingredient]) {
+            row += "<td>" + ingredients[ingredient][detail]+ "</td>";
+        }
+        row += "</tr>"
+    }
 
 	// Get all the relevant elements of the view (ones that show data
     // and/or ones that responed to interaction)
@@ -13,19 +24,7 @@ var DetailsView = function (container, model) {
   //  console.log (model.getAllIngredients());
 
     this.ingTable.html(row);
-
-
-/*
-
-<tr>
-
-                          <td>"+unit+"</td>
-                          <td>Olive Oil</td>
-                          <td>SEK</td>
-                          <td>0.20</td>
-                      </tr>
-"
-  */  	
+	
 	
     // View 4/6
     // Implement in Screens for Details

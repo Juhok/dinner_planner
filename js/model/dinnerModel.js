@@ -38,13 +38,19 @@ var DinnerModel = function () {
 
     }
 
+    this.getIngredient = function (type) {
+
+        var id = this.getSelectedDish(type);
+
+        return this.getDish(id).ingredients;
+    }
+
     //Returns all ingredients for all the dishes on the menu.
     this.getAllIngredients = function () {
         
         var starterI;
         var mainDishI;
         var dessertI;
-
 
         var menuIngredients = [{ 'starter': starterI }, { 'main dish': mainDishI }, { 'dessert': dessertI}];
 
@@ -59,7 +65,7 @@ var DinnerModel = function () {
             dessertI = this.getDish(menu[2].id).ingredients;
         }
 
-        return this.getDish(menu[1].id).ingrediant;
+        return this.getDish(menu[1].id).ingrediants;
     }
 
     //Returns the total price of the menu (all the ingredients multiplied by number of guests).
