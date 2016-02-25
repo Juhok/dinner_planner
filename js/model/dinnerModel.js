@@ -125,6 +125,18 @@ var DinnerModel = function () {
                 return dish.type == type && found;
             });
         }
+        this.getImage = function (dish) {
+            return "meatballs.jpg";
+        }
+
+        this.getName = function (id) {
+            return this.getDish(id).name;
+        }
+        this.getDescription = function (id) {
+            return this.getDish(id).description;
+        }
+        
+
 
         //function that returns a dish of specific ID
         this.getDish = function (id) {
@@ -151,6 +163,8 @@ var DinnerModel = function () {
             }
             return cost;
         }
+
+
 
         
 
