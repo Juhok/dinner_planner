@@ -2,17 +2,26 @@
 var SideView = function (container, model) {
 	
 
-    this.dishCost = container.find("#dishCost");
-    this.totalCost = container.find("#totalCost");
-
-    model.setNumberOfGuests(4);
+    model.setNumberOfGuests(10);
 
     model.addDishToMenu(101);
     model.addDishToMenu(1);
-    model.addDishToMenu(2);
+    model.addDishToMenu(202);
 
-    this.dishCost.html(model.getDishCost(101));
+    this.totalCost = container.find("#totalCost");
+    this.dishCell = container.find("#dishCell");
+
+    var htmlMenu = "";
+    var jsMenu = model.getFullMenu();
+
+    // Get the name and cost of selected menu dishes
+    for (var i = 0; i < jsMenu.length; i++) {
+        htmlMenu += "<tr>" + "<td>" + model.getDish(jsMenu[i].id).name + "</td>"
+        + "<td>" + model.getDishCost(jsMenu[i].id) + "</td>" + "</tr>";
+    }
+
     this.totalCost.html(model.getTotalMenuPrice());
+    this.dishCell.html(htmlMenu);
 
 
     // View 2/6

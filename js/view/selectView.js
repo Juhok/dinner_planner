@@ -7,7 +7,7 @@ var SelectView = function (container, model) {
     this.dishItem = container.find("#dishItem");
     var htmlDishes;
 
-    var dishes = model.getAllDishesHello();
+    var dishes = model.getAllDishes('main dish');
 
 
     for (i = 0; i < dishes.length; i++) {
