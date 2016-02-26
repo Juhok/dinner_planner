@@ -2,7 +2,7 @@
 var SideView = function (container, model) {
 	
 
-    model.setNumberOfGuests(10);
+    model.setNumberOfGuests(2);
 
     model.addDishToMenu(101);
     model.addDishToMenu(1);

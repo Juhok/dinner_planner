@@ -23,9 +23,9 @@ var DetailsView = function (container, model) {
 
     this.backToSelectDish = container.find("#backToSelectDish");
     this.ingTable = container.find("#ingTable");
-
-  //  console.log (model.getAllIngredients());
-
+    this.totalCost = container.find("#total");
+        
+    this.totalCost.html(model.getDishCost(1));
     this.ingTable.html(row);
 	
 	
