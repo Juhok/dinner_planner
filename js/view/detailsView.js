@@ -4,14 +4,17 @@ var DetailsView = function (container, model) {
     var row;
 
     model.addDishToMenu(1);
+    model.setNumberOfGuests(4);
+
 
     var ingredients = model.getIngredient('starter');
 
     for (ingredient in ingredients) {
         row += "<tr>"
-        for (detail in ingredients[ingredient]) {
-            row += "<td>" + ingredients[ingredient][detail]+ "</td>";
-        }
+        row += "<td>" + model.getNumberOfGuests() * ingredients[ingredient]['quantity'] + " " + ingredients[ingredient]['unit'] + "</td>"
+        + "<td>" + ingredients[ingredient]['name'] + "</td>"
+        + "<td>" + "SEK" + "</td>"
+        + "<td>" + model.getNumberOfGuests() * ingredients[ingredient]['price'] + "</td>";
         row += "</tr>"
     }
 
