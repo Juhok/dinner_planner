@@ -9,6 +9,18 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="style/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+</script>
+
 
 </head>
 <body>
@@ -62,12 +74,24 @@
                    <li><h4>Cost</h4></li>
                </ul>
                </div>
-           <div>
-               <ul class="list-inline">
-                   <li><p>Pending</p></li>
-                   <li><p><span id="dishCost"></span></p></li>
-               </ul>
-               </div>
+          
+                  <table class="table" id="dishCell">
+                    
+                   <!--  <tr>
+                      <td>Table Cell</td>
+                      <td>Table Cell</td>
+                    </tr> -->
+
+
+                  </table>
+
+                     
+                   
+                  </table>
+
+
+
+
 
                <hr>
            <div>
@@ -130,13 +154,16 @@
   <hr>
 
   <br />
+
+
+ 
+
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
   
 
-
-  <p>
-   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-
- </p>
  <br />
 
     <div id="selectView">
