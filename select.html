@@ -10,16 +10,7 @@
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="style/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-   <script>
-$(document).ready(function(){
-    $("#hide").click(function(){
-        $("p").hide();
-    });
-    $("#show").click(function(){
-        $("p").show();
-    });
-});
-</script>
+
 
 
 </head>
@@ -68,32 +59,22 @@ $(document).ready(function(){
 
     <hr>
        <div id = "sideView">
-           <div>
+           
+                
+                <table class="table">
 
-    
-
-
-
-               <ul class="list-inline">
-                   <li><h4>Dish Name</h4></li>
-                   <li class="pull-right"><h4>Cost</h4></li>
-               </ul>
-               </div>
-          
-                  <table class="table" id="dishCell">
-                    
-                   <!--  <tr>
-                      <td>Table Cell</td>
-                      <td>Table Cell</td>
-                    </tr> -->
-
-
+                  <thead>
+                    <tr>
+                      <td ><h4>Dish Name</h4></td>
+                      <td ><h4>Cost</h4></td>
+                    </tr>
+                  </thead>
                   </table>
 
-                     
+                <!--   here comes the data from the Model and from selectView -->
 
-
-
+                  <table class="table" id="dishCell">
+                  </table>
                <hr>
            <div>
                <ul class="list-inline">
@@ -104,10 +85,7 @@ $(document).ready(function(){
 
        </div>
 
-
     <br />
-
-
 
     <input class="btn btn-default" type="button" value="Confirm Dinner" onclick="window.location='details.html';">
 
@@ -157,12 +135,6 @@ $(document).ready(function(){
   <br />
 
 
- 
-
-<p>If you click on the "Hide" button, I will disappear.</p>
-
-<button id="hide">Hide</button>
-<button id="show">Show</button>
   
 
  <br />
@@ -183,14 +155,17 @@ $(document).ready(function(){
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
 <!-- The application JavaScript code -->
-<script src="js/app.js"></script>
-<script src="js/model/dinnerModel.js"></script>
-<script src="js/view/sideView.js"></script>
-<script src="js/view/selectView.js"></script>
-<script src="js/view/exampleView.js"></script>
-<script src="js/view/overviewView.js"></script>
-<script src="js/view/instructionsView.js"></script>
-<script src="js/view/detailsView.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/exampleView.js"></script>
+  <script src="js/view/exampleViewController.js"></script>
+  <script src="js/view/sideMenuView.js"></script>
+  <script src="js/view/sideMenuViewController.js"></script>
+  <script src="js/view/sideView.js"></script>
+  <script src="js/view/selectView.js"></script>
+  <script src="js/view/detailsView.js"></script>
+  <script src="js/view/overviewView.js"></script>
+  <script src="js/view/instructionsView.js"></script>
 
 </body>
 </html>

@@ -5,6 +5,7 @@ $(function() {
     //And create the needed controllers and views
 	
 	var exampleView = new ExampleView($("#exampleView"), model); // View 1, index screen
+ 	var exampleViewController = new ExampleViewController(exampleView,model);
 
 	var sideView = new SideView($("#sideView"), model); // View 2, Select and details screen
 
@@ -15,6 +16,7 @@ $(function() {
 	var overviewView = new OverviewView($("#overviewView"), model); // View 5, Overview screen
 
 	var intructionsView = new InstructionsView($("#instructionsView"), model); // View 6, Instructions screen
+
 
 
 
