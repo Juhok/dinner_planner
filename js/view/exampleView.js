@@ -8,7 +8,13 @@ var ExampleView = function (container, model) {
 	this.plusButton = container.find("#plusGuest");	
 	this.minusButton = container.find("#minusGuest");
 
+
+	// create dinner button integration
+
+
+
 	this.numberOfGuests.html(model.getNumberOfGuests());
+
 
     // View 1/6
     // Implement in Screen for index (Home)

@@ -1,9 +1,10 @@
 //ExampleView Object constructor
-var ExampleView = function (container, model) {
+var IndexView = function (container, model) {
 
 
+	this.container = container;
 
-
+	container.html('<h2>A Home Dinner Service</h2>');
 
 	
 	// Get all the relevant elements of the view (ones that show data
@@ -11,6 +12,13 @@ var ExampleView = function (container, model) {
 	this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
+
+
+	this.createDinnerButton = container.find("#createDinner");
+	console.log("button found");
+
+
+
 	
 	model.setNumberOfGuests(10);
 

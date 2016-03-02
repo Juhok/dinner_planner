@@ -17,9 +17,14 @@
 		</div>
 	</nav>
 
+	<!-- first page starts -->
+
 	<div class="row">
 
 		<div class="col-md-6 smvertcont">
+
+			<div id="indexView"> </div>
+
 			<h2>A Home Dinner Service</h2>
 
 			<hr>
@@ -31,7 +36,9 @@
 			<br />
 			<h4>Start quickly!</h4>
 
-			<input class="btn btn-default" type="button" value="Create new dinner" onclick="window.location='select.html';">
+			<input id="createDinner"  class="btn btn-default" type="button" value="Create new dinner">
+
+			<!-- onclick="window.location='select.html';" -->
 
 			<br />
 			<br />
@@ -51,7 +58,10 @@
 
 
 
+<!-- fiorst page ends -->
 
+
+<!-- sideview starts -->
 
 
 	<div class="col-xs-12 col-md-2 smvertcontselect">
@@ -61,7 +71,7 @@
       <li><h4>People</h4></li>
       <li>
 
-        <select class="form-control">
+        <select id="numberOfGuests" class="form-control">
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -125,17 +135,143 @@
     
 </div>
 
-	<div id="sideView">
+<!-- sideview ends -->
 
-		<!-- Here comes the sideMenu from exampleView view 4 -->
 
-	</div>
+<!-- select.html starts -->
 
-		<div id="sideMenuView">
+<div class="col-xs-12 col-sm-12 col-md-8 mvertcontselect">
 
-		<!-- Here comes the sideMenu from exampleView view 4 -->
+  <h2>Select Dish</h2>
+  <hr>
 
-	</div>
+  <form class="form-inline">
+
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-3 -->
+
+
+
+    <div class="btn-group">
+
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Main
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">Desert</a></li>
+        <li><a href="#">Appetite</a></li>
+        <li><a href="#">Drink</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Special</a></li>
+      </ul>
+    </div>
+
+
+  </form>
+  <hr>
+
+  <br />
+
+
+  
+
+ <br />
+
+    <div id="selectView">
+
+        <div class="row" id="dishItem">
+
+        </div>
+    </div>
+</div>
+
+<!-- select.html ends -->
+
+<!-- Details.html starts -->
+
+<div class="col-xs-12 col-sm-12 col-md-8 mvertcontselect">
+
+
+  <h2>Lasagne</h2>
+
+
+  <div class="row">
+      <div id="detailsView">
+          <div class="col-md-6">
+
+              <img src="images/lasagne.jpg" alt="lasagne" width="95%" hight="95%"/>
+
+               <br />
+                <br />
+
+              <p>
+                  Lasagne originated in Italy, traditionally ascribed to the city of Naples (Campania), where the first modern recipe was created in the Middle Ages and published in Liber de Coquina (The Book of Cookery), and became a traditional dish.
+              </p>
+
+              <br />
+
+
+              
+              <div>
+                  <button id = "backToSelectDish" input class="btn btn-default" onclick="window.location='select.html';">
+                  <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> Back to selected dish </button>
+              </div>
+
+          </div>
+          <div class="col-md-6">
+
+
+              <div class="panel panel-default">
+                  <!-- Default panel contents -->
+                  <div class="panel-heading"><h4>Ingredients for 4 people</h4></div>
+
+                  <!-- Table -->
+                  <table class="table" id="ingTable">
+
+                     
+                   
+                  </table>
+
+
+
+
+              </div>
+
+
+              
+
+   <ul class="list-inline">
+                <li>  <input class="btn btn-default" type="button" value="Confirm Dish" onclick="window.location='overview.html';">  </li>
+                <li class="pull-right"><p>SEK</p></li>
+                <li class="pull-right"><div><span id="total"></span></div></li>
+            </ul>
+
+          
+
+          </div>
+      </div>
+  </div>
+
+
+<h2>Preparation</h2>
+
+ <p>
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+
+
+     </p>
+
+</div>
+
+<!-- Details.html ends -->
+
 
 	<div class="col-md-6">
 

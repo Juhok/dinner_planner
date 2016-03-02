@@ -1,5 +1,5 @@
 //ExampleViewController Object constructor
-var ExampleViewController = function(view, model ) {
+var IndexViewController = function(view, model ) {
  
 //  view.plusButton.click(function(){
 //  model.setNumberOfGuests(model.getNumberOfGuests() + 1);
@@ -9,6 +9,17 @@ var ExampleViewController = function(view, model ) {
 //  model.setNumberOfGuests(model.getNumberOfGuests() - 1);
 //  });
 // }
+
+
+createDinnerButton.onclick = function(){
+
+	overallStateController.indexView.container.hide();
+		console.log("onclick");
+
+
+
+}
+
 
 
 
