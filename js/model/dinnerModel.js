@@ -19,6 +19,9 @@ var DinnerModel = function () {
             guests = 0;
         }
         this.notifyObservers("newGuestsNumber");
+
+        console.log("here from model");
+
         return guests;
     }
 
