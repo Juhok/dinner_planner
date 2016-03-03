@@ -11,14 +11,14 @@ var IndexViewController = function(view, model ) {
 // }
 
 
-createDinnerButton.onclick = function(){
+// createDinnerButton.onclick = function(){
 
-	overallStateController.indexView.container.hide();
-		console.log("onclick");
+// 	overallStateController.indexView.container.hide();
+// 		console.log("onclick");
 
 
 
-}
+// }
 
 
 

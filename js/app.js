@@ -13,6 +13,10 @@ $(function() {
 
 	var sideView = new SideView($("#sideView"), model); // View 2, Select and details screen
 
+	var indexView = new IndexView($("#indexView"), model); // View 2, Select and details screen
+	var indexViewController = new IndexViewController(indexView,model);
+
+
 	var selectView = new SelectView($("#selectView"), model); // View 3, Select screen
 
 	var detailsView = new DetailsView($("#detailsView"), model); // View 4, Details screen

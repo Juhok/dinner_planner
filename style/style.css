@@ -5,6 +5,12 @@
     background: rgba(225, 241, 93, 0.7);
 }
 
+h5, .h5 {
+    font-size: 14px;
+    color: grey;
+    font-weight: lighter;
+}
+
 body {
     background-image: url("../images/family.jpg");
     background-color: #cccccc;
