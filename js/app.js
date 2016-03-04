@@ -11,7 +11,8 @@ $(function() {
  	// var overallStateController = new OverallStateController (model);
 
 
-	var sideView = new SideView($("#sideView"), model); // View 2, Select and details screen
+ 	var sideView = new SideView($("#sideView"), model); // View 2, Select and details screen
+ 	var sideViewController = new SideViewController(sideView, model);
 
 	var indexView = new IndexView($("#indexView"), model); // View 2, Select and details screen
 	var indexViewController = new IndexViewController(indexView,model);
