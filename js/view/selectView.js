@@ -5,14 +5,16 @@ var SelectView = function (container, model) {
     // Implement in Screen for select
 
     this.dishItem = container.find("#dishItem");
-    var htmlDishes;
+    this.dropdownMenu1 = container.find("#dropdownMenu1");
 
-    var type = 'main dish';
-    var dishes = model.getAllDishes('main dish');
+    var htmlDishes;
+    var type = 'main dish'; // Start type
+    var dishes = model.getAllDishes(type);
 
 
     for (i = 0; i < dishes.length; i++) {
 
+        //TODO: Create button to that does 1) update overallstatecontroller to show detailsview 2) update details id.
         htmlDishes += "<div class='col-lg-2 col-sm-6 col-md-4>'"
         + "<div class='thumbnail'>"
         + "<a href='#'" + "class='thumbnail'" + "onclick=" + "'window.location=" + "'details.html'" + ";'>"
@@ -27,10 +29,6 @@ var SelectView = function (container, model) {
     }
 
     this.dishItem.html(htmlDishes);
-
-
-    
-	
 
 }
  

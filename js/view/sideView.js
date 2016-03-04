@@ -17,10 +17,6 @@ var SideView = function (container, model) {
     model.addObserver(this);
 
     var htmlMenu = "";
-
-    
-
-
     this.updateHtmlMenu = function (model) {
         var htmlMenu = "";
         var jsMenu = model.getFullMenu();

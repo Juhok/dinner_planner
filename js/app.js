@@ -14,6 +14,7 @@ $(function() {
 	var indexViewController = new IndexViewController(indexView,model);
 
 	var selectView = new SelectView($("#selectView"), model); // View 3, Select screen
+	var selectViewController = new SelectViewController(selectView, model);
 
 	var detailsView = new DetailsView($("#detailsView"), model); // View 4, Details screen
 
