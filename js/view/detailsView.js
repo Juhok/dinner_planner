@@ -26,12 +26,12 @@ var DetailsView = function (container, model) {
         row += "</tr>"
     }
 
-    
-        
+
+
     this.totalCost.html(model.getDishCost(1));
     this.ingTable.html(row);
-	
-    this.updateIngTable = function(model){
+
+    this.updateIngTable = function (model) {
 
         var ingredients = model.getIngredient('starter'); //Gets an object from 
         var row;
@@ -48,9 +48,9 @@ var DetailsView = function (container, model) {
         return row;
 
     }
-	
-    
-	
+
+
+
     // Update function. Called from the model.
     this.update = function (model, arg) {
 
@@ -63,8 +63,6 @@ var DetailsView = function (container, model) {
             // Print argument and view
             console.log(arg + this.toString);
         }
-
-
+    }
 
 }
- 
