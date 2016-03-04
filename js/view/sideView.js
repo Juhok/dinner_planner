@@ -29,7 +29,9 @@ var SideView = function (container, model) {
         // Get the name and cost of selected menu dishes
         for (var i = 0; i < jsMenu.length; i++) {
             htmlMenu += "<tr>" + "<td>" + model.getDish(jsMenu[i].id).name + "</td>"
-            + "<td>" + model.getDishCost(jsMenu[i].id) + "</td>" + "</tr>";
+            + "<td>" + model.getDishCost(jsMenu[i].id) + "</td>" 
+            + "<td>" + '<input type="button" class="btn btn-danger btn-xs" value="X" />' + "</td>"
+            + "</tr>";
         }
         return htmlMenu;
     }
@@ -58,4 +60,12 @@ var SideView = function (container, model) {
 
 
 }
+
+
+
+
+
+
+
+
  

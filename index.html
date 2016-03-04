@@ -1,18 +1,18 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Juhos and Martin's Dinner planner</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style/style.css">
-  <style>
-  #div1 {width:200px;height:70px;padding:10px;border:1px solid #aaaaaa;}
-  </style>
-  <script>
-  function allowDrop(ev) {
+﻿  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Juhos and Martin's Dinner planner</title>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style/style.css">
+   <style>
+   #div1 {width:200px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+   </style>
+   <script>
+   function allowDrop(ev) {
     ev.preventDefault();
   }
   function drag(ev) {
@@ -38,7 +38,7 @@
      <h2>A Home Dinner Service</h2>
      <hr>
      <span id="paragraph"></span>
-     <input id="createDinner"  class="btn btn-default" type="button" value="Create new dinner">
+     <input id="createDinner"  class="btn btn-default routing" type="button" value="Create new dinner">
      <br />
      <br />
      <div id="exampleView">
@@ -87,7 +87,7 @@
     <!--   here comes the data from the Model and from selectView -->
     <table class="table" id="dishCell">
 
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> Drag and drop lasagne here</div>
+      <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> Drag and drop lasagne here</div> -->
 
 
     </table>
@@ -106,7 +106,7 @@
 <div id="selectView">
   <div class="col-xs-12 col-sm-12 col-md-8 mvertcontselect">
     <h2>Select Dish</h2>
-    <img id="drag1" src="images/lasagne.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+    <!-- <img id="drag1" src="images/lasagne.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69"> -->
     <hr>
     <form class="form-inline">
       <div class="col-lg-3 col-md-6 col-xs-12">
@@ -178,28 +178,115 @@
      </p>
    </div>
  </div>
- <!-- Details.html ends -->
- <div class="col-md-6">
- </div>
- <!-- jQuery -->
- <script src="https://code.jquery.com/jquery.js"></script>
- <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
- <!-- The application JavaScript code -->
- <script src="js/app.js"></script>
- <script src="js/model/dinnerModel.js"></script>
- <script src="js/view/exampleView.js"></script>
- <script src="js/view/sideMenuView.js"></script>
- <script src="js/view/sideView.js"></script>
- <script src="js/view/selectView.js"></script>
- <script src="js/view/detailsView.js"></script>
- <script src="js/view/overviewView.js"></script>
- <script src="js/view/instructionsView.js"></script>
- <script src="js/view/indexView.js"></script>
- <script src="js/controller/indexViewController.js"></script>
- <script src="js/controller/overallStateController.js"></script>
- <script src="js/controller/sideViewController.js"></script>
-
- <script src="js/controller/exampleViewController.js"></script>
+ <!-- Detailsview ends -->
+ <!-- overviewView starts -->
+ <div id="overviewView">
+  <div class="row">
+    <div class="col-md-10 smvertcont">
+      <ul class="list-inline">
+        <li><h2>My Dinner: <span id="numberOfGuests"></span> People</h2></li>
+        <li>
+          <div>
+            <button id="backToSelectDish" input class="btn btn-default">
+              <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> go back and Edit Dinner
+            </button>
+          </div>
+        </li>
+      </ul>
+      <hr>
+      <div class="row" id="menu"> </div>
+      <p>Total: SEK <span id="totalPrice"></span></p>
+      <hr>
+      <br />
+      <input class="btn btn-default" type="button" value="Print full recipe" onclick="window.location='instructions.html';">
+      <br />
+      <br />
+    </div>
+  </div>
+</div>
+<!-- overviewView ends -->
+<!-- instructionsview starts -->
+<div class="row">
+  <div class="col-md-10 smvertcont">
+    <ul class="list-inline">
+      <li><h2>My Dinner: 4 People</h2></li>
+      <li>
+        <div>
+          <button id = "backToSelectDish" input class="btn btn-default" onclick="window.location='select.html';">
+            <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> go back and Edit Dinner </button>
+          </div>     
+        </li>
+      </ul>
+      <hr>
+      <div id="instructionView">
+       <div class="row">
+         <div class="col-md-6">
+           <div class="row">
+            <div class="col-lg-12 col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <a href="#" class="thumbnail">
+                  <img src="images/meatballs.jpg" alt="Mountain View">
+                </a>
+                <div class="caption">
+                  <h3>Lasagne</h3>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <a href="#" class="thumbnail">
+                  <img src="images/icecream.jpg" alt="Mountain View">
+                </a>
+                <div class="caption">
+                  <h3>Meatballs</h3>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <a href="#" class="thumbnail">
+                  <img src="images/toast.jpg" alt="Mountain View">
+                </a>
+                <div class="caption">
+                  <h3>Soda</h3>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Preparation</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>
+<!-- InstrustionView ends -->
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+<script src="js/model/dinnerModel.js"></script>
+<script src="js/view/exampleView.js"></script>
+<script src="js/view/sideMenuView.js"></script>
+<script src="js/view/sideView.js"></script>
+<script src="js/view/selectView.js"></script>
+<script src="js/view/detailsView.js"></script>
+<script src="js/view/overviewView.js"></script>
+<script src="js/view/instructionsView.js"></script>
+<script src="js/view/indexView.js"></script>
+<script src="js/controller/indexViewController.js"></script>
+<script src="js/controller/overallStateController.js"></script>
+<script src="js/controller/sideViewController.js"></script>
+<script src="js/controller/exampleViewController.js"></script>
 </body>
 </html>
