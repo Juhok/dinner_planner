@@ -1,14 +1,17 @@
 var overallStateController = function(model) {
 
-	this.indexView = new IndexView ($("#indexView"), model);
-	this.indexCtrl = new IndexCtrl(this.indexView, model);
+    $(".routing[data-state]").on("click", function () {
+        var state = $(this).attr("data-state");
 
-	this.indexView.container.hide();
-	
-	// this.sideMenuView.container.hide();
-	// this.mainView.container.hide();
-	// this.selectedDishView.container.hide();
-	// this.overView.container.hide();
-	// this.instructionView.container.hide();
+        this.showState(state);
+    });
+    //<button class="routing" data-state="home">Go to home</button>
 
+    this.showState = function (state) {
+
+        if (state = "selectSide") {
+
+        }
+
+    }
 }

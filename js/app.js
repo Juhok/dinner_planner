@@ -7,16 +7,11 @@ $(function() {
 	var exampleView = new ExampleView($("#exampleView"), model); // View 1, index screen
  	var exampleViewController = new ExampleViewController(exampleView,model);
 
-
- 	// var overallStateController = new OverallStateController (model);
-
-
  	var sideView = new SideView($("#sideView"), model); // View 2, Select and details screen
  	var sideViewController = new SideViewController(sideView, model);
 
 	var indexView = new IndexView($("#indexView"), model); // View 2, Select and details screen
 	var indexViewController = new IndexViewController(indexView,model);
-
 
 	var selectView = new SelectView($("#selectView"), model); // View 3, Select screen
 
@@ -25,6 +20,8 @@ $(function() {
 	var overviewView = new OverviewView($("#overviewView"), model); // View 5, Overview screen
 
 	var intructionsView = new InstructionsView($("#instructionsView"), model); // View 6, Instructions screen
+
+	var overallStateController = new OverallStateController(model); // Controller which views are displayed
 
 
 
