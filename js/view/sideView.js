@@ -18,9 +18,13 @@ var SideView = function (container, model) {
 
     var htmlMenu = "";
 
+    
+
+
     this.updateHtmlMenu = function (model) {
         var htmlMenu = "";
         var jsMenu = model.getFullMenu();
+        console.log(jsMenu);
 
         // Get the name and cost of selected menu dishes
         for (var i = 0; i < jsMenu.length; i++) {

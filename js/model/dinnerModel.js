@@ -200,6 +200,13 @@ var DinnerModel = function () {
         // can sometimes be empty like in the example of eggs where
         // you just say "5 eggs" and not "5 pieces of eggs" or anything else.
         var dishes = [{
+            'id': 0,
+            'name': "",
+            'image': "",
+            'despription': "",
+            'ingredients':[]
+        }
+    ,{
             'id': 1,
             'name': 'French toast',
             'type': 'starter',
