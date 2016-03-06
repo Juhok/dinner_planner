@@ -1,4 +1,4 @@
-﻿  <!DOCTYPE html>
+﻿ <!DOCTYPE html>
   <html lang="en">
   <head>
    <meta charset="utf-8">
@@ -124,13 +124,13 @@
       </div><!-- /.col-lg-3 -->
       <div class="btn-group">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Main
+          Dishes
           <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="#">Desert</a></li>
-          <li><a href="#">Appetite</a></li>
-          <li><a href="#">Drink</a></li>
+        <ul class="dropdown-menu routing" aria-labelledby="dropdownMenu1" data-state="detailsSide">
+          <li><a href="#">Starter</a></li>
+          <li><a href="#">Main dish</a></li>
+          <li><a href="#">Dessert</a></li>
           <li role="separator" class="divider"></li>
           <li><a href="#">Special</a></li>
         </ul>
@@ -158,7 +158,7 @@
         </p>
         <br />
         <div>
-          <button id = "backToSelectDish" input class="btn btn-default">
+          <button id = "backToSelectDish" input class="btn btn-default routing" data-state="selectSide">
             <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> Back to selected dish </button>
           </div>
         </div>
@@ -171,7 +171,7 @@
             </table>
           </div>
           <ul class="list-inline">
-            <li>  <input class="btn btn-default" type="button" value="Confirm Dish">  </li>
+            <li>  <input class="btn btn-default routing" data-state="selectSide" type="button" value="Confirm Dish">  </li>
             <li class="pull-right"><p>SEK</p></li>
             <li class="pull-right"><div><span id="total"></span></div></li>
           </ul>
@@ -211,68 +211,70 @@
 </div>
 <!-- overviewView ends -->
 <!-- instructionsview starts -->
-<div class="row">
-  <div class="col-md-10 smvertcont">
-    <ul class="list-inline">
-      <li><h2>My Dinner: 4 People</h2></li>
-      <li>
-        <div>
-          <button id = "backToSelectDish" input class="btn btn-default" onclick="window.location='select.html';">
-            <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> go back and Edit Dinner </button>
-          </div>     
-        </li>
-      </ul>
-      <hr>
-      <div id="instructionView">
-       <div class="row">
-         <div class="col-md-6">
-           <div class="row">
-            <div class="col-lg-12 col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <a href="#" class="thumbnail">
-                  <img src="images/meatballs.jpg" alt="Mountain View">
-                </a>
-                <div class="caption">
-                  <h3>Lasagne</h3>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+    <div id="instructionsView">
+        <div class="row">
+            <div class="col-md-10 smvertcont">
+                <ul class="list-inline">
+                    <li><h2>My Dinner: 4 People</h2></li>
+                    <li>
+                        <div>
+                            <button id="backToSelectDish" input class="btn btn-default" onclick="window.location='select.html';">
+                                <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> go back and Edit Dinner
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#" class="thumbnail">
+                                        <img src="images/meatballs.jpg" alt="Mountain View">
+                                    </a>
+                                    <div class="caption">
+                                        <h3>Lasagne</h3>
+                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#" class="thumbnail">
+                                        <img src="images/icecream.jpg" alt="Mountain View">
+                                    </a>
+                                    <div class="caption">
+                                        <h3>Meatballs</h3>
+                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#" class="thumbnail">
+                                        <img src="images/toast.jpg" alt="Mountain View">
+                                    </a>
+                                    <div class="caption">
+                                        <h3>Soda</h3>
+                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Preparation</h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-lg-12 col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <a href="#" class="thumbnail">
-                  <img src="images/icecream.jpg" alt="Mountain View">
-                </a>
-                <div class="caption">
-                  <h3>Meatballs</h3>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <a href="#" class="thumbnail">
-                  <img src="images/toast.jpg" alt="Mountain View">
-                </a>
-                <div class="caption">
-                  <h3>Soda</h3>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <hr>
         </div>
-        <div class="col-md-6">
-          <h2>Preparation</h2>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-          </p>
-        </div>
-      </div>
     </div>
-    <hr>
-  </div>
-</div>
 <!-- InstrustionView ends -->
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery.js"></script>
@@ -293,6 +295,6 @@
 <script src="js/controller/overallStateController.js"></script>
 <script src="js/controller/sideViewController.js"></script>
 <script src="js/controller/exampleViewController.js"></script>
-    <script src="js/controller/selectViewController.js"></script>
+<script src="js/controller/selectViewController.js"></script>
 </body>
 </html>

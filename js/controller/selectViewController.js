@@ -2,8 +2,13 @@
 var SelectViewController = function(view, model) {
  
     //TODO: Get the dropdownmenu to change the type
+    console.log("Select view controller");
 
-    view.type = 'main dish';
+    
+
+    //TODO: Get the image buttons to change detaildish id in the model
+
+
 
 }
 

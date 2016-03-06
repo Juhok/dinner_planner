@@ -18,15 +18,12 @@ var DinnerModel = function () {
     }
 
 
-
+    // Variables
     var guests = 0;
     var menu = [{ 'type': 'starter', 'id': 0 }, { 'type': 'main dish', 'id': 0 }, { 'type': 'dessert', 'id': 0 }]; // Menu array with dish objects
+    var detailsDishID; // ID of dish in detailsView
 
 
-    this.testFunction = function () {
-        return this.getDishCost(101);
-    }
-    
     // Sets the number of guests
     this.setNumberOfGuests = function (num) {
         guests += num;
@@ -34,17 +31,14 @@ var DinnerModel = function () {
             guests = 0;
         }
         this.notifyObservers("setNumberOfGuests");
-        console.log("setNumberOfGuests have been updated!");
-
-        return guests;
     }
 
-    // should return number of guests
+    // Returns number of guests
     this.getNumberOfGuests = function () {
         return guests;
     }
 
-    //Returns the dish that is on the menu for selected type 
+    //Returns the dish ID for dish on the menu for selected type 
     this.getSelectedDish = function (type) {
 
         for (dish in menu) {
@@ -59,6 +53,7 @@ var DinnerModel = function () {
         return $(menu);
     }
 
+    // Returns ingredient for type on the menu
     this.getIngredient = function (type) {
 
         var id = this.getSelectedDish(type);
@@ -126,6 +121,7 @@ var DinnerModel = function () {
             }
     }
 
+    // TODO: What the fuck is this?
     this.getAllDishesHello = function () {
         return $(dishes);
     }
@@ -150,19 +146,22 @@ var DinnerModel = function () {
                 return dish.type == type && found;
             });
         }
+
+        // Returns image of dish
         this.getImage = function (dish) {
             return "meatballs.jpg";
         }
 
+        // Returns name of dish
         this.getName = function (id) {
             return this.getDish(id).name;
         }
+
+        // Returns description of dish
         this.getDescription = function (id) {
             return this.getDish(id).description;
         }
         
-
-
         //function that returns a dish of specific ID
         this.getDish = function (id) {
             for (key in dishes) {
@@ -190,7 +189,6 @@ var DinnerModel = function () {
         }
 
         
-
         // the dishes variable contains an array of all the 
         // dishes in the database. each dish has id, name, type,
         // image (name of the image file), description and

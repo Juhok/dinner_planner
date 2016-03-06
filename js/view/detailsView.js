@@ -60,8 +60,6 @@ var DetailsView = function (container, model) {
             this.ingTable.html(this.updateIngTable(model));
             this.totalCost.html(model.getTotalMenuPrice());
 
-            // Print argument and view
-            console.log(arg + this.toString);
         }
     }
 

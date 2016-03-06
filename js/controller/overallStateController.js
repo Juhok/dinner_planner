@@ -1,8 +1,16 @@
 var OverallStateController = function (model) {
 
+    // Start in indexView
+    $("#indexView").show();
+    $("#sideView").hide();
+    $("#selectView").hide();
+    $("#detailsView").hide();
+    $("#overviewView").hide();
+    $("#instructionsView").hide();
+
     this.showState = function (state) {
 
-        if (state = "selectSide") {
+        if (state == "selectSide") {
 
             // Show sideview and selectView
             $("#indexView").hide();
@@ -13,9 +21,10 @@ var OverallStateController = function (model) {
             $("#instructionsView").hide();
 
         }
-        else if (state = "detailsSide") {
+        else if (state == "detailsSide") {
             // Show sideview and detailsView
-            
+            console.log("detailsSide!!");
+
             $("#indexView").hide();
             $("#sideView").show();
             $("#selectView").hide();
@@ -23,7 +32,7 @@ var OverallStateController = function (model) {
             $("#overviewView").hide();
             $("#instructionsView").hide();
         }
-        else if (state = "overview") {
+        else if (state == "overview") {
             // Show overview
             // Hide the other
             $("#indexView").hide();
@@ -34,7 +43,7 @@ var OverallStateController = function (model) {
             $("#instructionsView").hide();
 
         }
-        else if (state = "instructions") {
+        else if (state == "instructions") {
             // Show instructions
             // Hide the other
             $("#indexView").hide();
@@ -44,7 +53,7 @@ var OverallStateController = function (model) {
             $("#overviewView").hide();
             $("#instructionsView").show();
         }
-        else if (state = "home") {
+        else if (state == "home") {
             // show indexView
             // Hide the other
             $("#indexView").show();

@@ -30,11 +30,9 @@ var OverviewView = function (container, model) {
         + "</div>"
         + "</div>"
         + "</div>";
-        console.log("Hello");
     }
 
 
-    
 
     this.numberOfGuests.html(model.getNumberOfGuests);
     this.menu.html(htmlMenu);

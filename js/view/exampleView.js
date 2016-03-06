@@ -24,15 +24,9 @@ var ExampleView = function (container, model) {
 // here are some code I tried to make the plus and minus buttons working
 	
 	this.update = function(model, arg) {
-
-		console.log("UPDATE sideMenuView // arg = "+arg);
 		
 		if (arg == "newGuestsNumber"){
 			this.numberOfGuests.html(model.getNumberOfGuests());
-
-			console.log("new guest");
-
-
 		}
 		if (arg == "newMenu"){
 			this.updateTable();
