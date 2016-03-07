@@ -11,6 +11,8 @@ var DetailsView = function (container, model) {
     this.dishImage = container.find('#drag2'); // Image
     this.confirmDishButton = container.find('#confirmDish'); //Button
 
+    console.log(this.confirmDishButton);
+
     // Adding detailsView as observer
     model.addObserver(this);
 

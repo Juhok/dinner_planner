@@ -122,7 +122,7 @@ var DinnerModel = function () {
             }
         }
         menu[newKey].id = id;
-
+        this.notifyObservers("confirmDish");
     }
 
         //Removes dish from menu

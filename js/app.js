@@ -17,6 +17,7 @@ $(function() {
 	var selectViewController = new SelectViewController(selectView, model);
 
 	var detailsView = new DetailsView($("#detailsView"), model); // View 4, Details screen
+	var detailsViewController = new DetailsViewController(detailsView, model); // View 4, Details screen
 
 	var overviewView = new OverviewView($("#overviewView"), model); // View 5, Overview screen
 
