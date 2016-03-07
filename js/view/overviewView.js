@@ -6,6 +6,11 @@ var OverviewView = function (container, model) {
     this.numberOfGuests = container.find("#numberOfGuests");
     this.menu = container.find("#menu");
     this.totalPrice = container.find("#totalPrice");
+    this.ConfirmDinner = container.find("#confirmDinner");
+
+     model.addObserver(this);
+
+    console.log("confirm dinner button")
 
     this.updateHtmlMenu = function () {
         var htmlMenu = "";
@@ -26,6 +31,9 @@ var OverviewView = function (container, model) {
             + "</div>";
         }
     }
+
+    model.addObserver(this);
+
 
     // Update function. Called from the model.
     this.update = function (model, arg) {
