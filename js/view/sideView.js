@@ -7,6 +7,10 @@ var SideView = function (container, model) {
     this.totalCost = container.find("#totalCost");
     this.dishCell = container.find("#dishCell");
 
+    this.ConfirmDinner = container.find("#confirmDinner");
+    model.addObserver(this);
+    console.log("confirm dinner button");
+
     // Add this view as an observer to the array "observers" in the model
     model.addObserver(this);
 
