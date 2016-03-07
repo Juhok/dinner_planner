@@ -42,7 +42,7 @@ var SelectView = function (container, model) {
     // Set all variables in the buttonArray to corresponding ID in index.html
     for (i = 0; i < this.buttonArray.length; i++) {
         this.buttonArray[i] = container.find("#"+dishes[i].id);
-        console.log(this.buttonArray[i]);
+        
     }
 
 

@@ -23,13 +23,12 @@ var SelectViewController = function(view, model) {
     var self = this;
     $(".routing[id]").on("click", function () {
         var id = $(this).attr("id");
-        console.log("ID:" + id);
+        console.log("selectView ID:" + id);
 
         if (id >= 0) {
             self.updateDishes(id);
             for (i = 0; i < dishes.length; i++) {
                 if (dishes[i].id == id) {
-                    console.log("dishes ID: " + dishes[i].id + "  button ID: " + id);
                     model.updateDetails(id);
                     break;
                 }
@@ -38,8 +37,6 @@ var SelectViewController = function(view, model) {
         
     });
 
-
-    //TODO: Get the image buttons to change detaildish id in the model
 
 }
 
