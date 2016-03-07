@@ -21,7 +21,7 @@ var ExampleView = function (container, model) {
 
 
 
-// here are some code I tried to make the plus and minus buttons working
+// here are some code I tried to make the plus and minus buttons working, Juho
 	
 	this.update = function(model, arg) {
 		

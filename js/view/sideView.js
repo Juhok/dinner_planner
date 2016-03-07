@@ -7,6 +7,48 @@ var SideView = function (container, model) {
     this.totalCost = container.find("#totalCost");
     this.dishCell = container.find("#dishCell");
     this.ConfirmDinner = container.find("#confirmDinner");
+
+
+
+    // new code from JUHO
+    // new code from JUHO 
+    // new code from JUHO
+
+    this.numberOfGuests = container.find('#numberOfGuests');
+    this.plusButton = container.find("#plusGuest"); 
+    this.minusButton = container.find("#minusGuest");
+
+
+    // create dinner button integration
+
+
+
+    this.numberOfGuests.html(model.getNumberOfGuests());
+
+
+    // View 1/6
+    // Implement in Screen for index (Home)
+
+
+
+// here are some code I tried to make the plus and minus buttons working, Juho
+    
+    this.update = function(model, arg) {
+        
+        if (arg == "newGuestsNumber"){
+            this.numberOfGuests.html(model.getNumberOfGuests());
+        }
+        if (arg == "newMenu"){
+            this.updateTable();
+        }
+    }
+
+    console.log("i am here");
+    model.addObserver(this);
+
+    // new code from JUHO ENDS
+    // new code from JUHO ENDS
+    // new code from JUHO ENDS
  
 
     // Array that will hold container.find for all buttons created in the dishItem loop
