@@ -150,7 +150,7 @@
     <h2>Lasagne</h2>
     <div class="row">
       <div class="col-md-6">
-        <img id="drag2" src="images/lasagne.jpg" alt="lasagne" draggable="true" ondragstart="drag(event)" width="95%" hight="95%"/>
+        <img id="drag2" src="" alt="lasagne" draggable="true" ondragstart="drag(event)" width="95%" hight="95%"/>
         <br />
         <br />
         <p>
@@ -165,13 +165,13 @@
         <div class="col-md-6">
           <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading"><h4>Ingredients for 4 people</h4></div>
+            <div class="panel-heading"><h4><span id="numberOfGuests"></span></h4></div>
             <!-- Table -->
             <table class="table" id="ingTable">
             </table>
           </div>
           <ul class="list-inline">
-            <li>  <input class="btn btn-default routing" data-state="selectSide" type="button" value="Confirm Dish">  </li>
+            <li> <button id="confirmDish" class="btn routing" data-state="selectSide" type="button" value="Confirm Dish">Confirm Dish</button></li>
             <li class="pull-right"><p>SEK</p></li>
             <li class="pull-right"><div><span id="total"></span></div></li>
           </ul>

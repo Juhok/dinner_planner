@@ -40,9 +40,14 @@ var SideView = function (container, model) {
             // Update this view
             this.totalCost.html(model.getTotalMenuPrice());
             this.dishCell.html(this.updateHtmlMenu(model));
-
             
         }
+        else if (arg == "detailsDish") {
+            // Update this view
+            this.totalCost.html(model.getTotalMenuPrice());
+            this.dishCell.html(this.updateHtmlMenu(model));
+        }
+
     }
     
 

@@ -12,6 +12,7 @@ var DinnerModel = function () {
     // that will call the update method on all the observers in the array
     this.notifyObservers = function (arg) {
         //console.log("notifyObservers arg = "+arg);
+        console.log("Observers are being notified...")
         for (var i = 0; i < this.observers.length; i++) {
             this.observers[i].update(this, arg);
         }
@@ -21,7 +22,7 @@ var DinnerModel = function () {
     // Variables
     var guests = 0;
     var menu = [{ 'type': 'starter', 'id': 0 }, { 'type': 'main dish', 'id': 0 }, { 'type': 'dessert', 'id': 0 }]; // Menu array with dish objects
-    var detailsDishID; // ID of dish in detailsView
+    var detailsDishID = 0; // ID of dish in detailsView
 
 
     // Sets the number of guests
@@ -36,6 +37,13 @@ var DinnerModel = function () {
     // Returns number of guests
     this.getNumberOfGuests = function () {
         return guests;
+    }
+
+    // ID of dish that should be displayed in detailsView
+    this.updateDetails = function (id) {
+        console.log("Model updateDetails: "+id)
+        detailsDishID = id;
+        this.notifyObservers("detailsDish");
     }
 
     //Returns the dish ID for dish on the menu for selected type 
@@ -54,11 +62,16 @@ var DinnerModel = function () {
     }
 
     // Returns ingredient for type on the menu
-    this.getIngredient = function (type) {
+    this.getIngredientOnMenu = function (type) {
 
         var id = this.getSelectedDish(type);
 
         return this.getDish(id).ingredients;
+    }
+
+    // Returns ingredient for specific ID
+    this.getIngredient = function () {
+        return this.getDish(detailsDishID).ingredients;
     }
 
     //Returns all ingredients for all the dishes on the menu.
@@ -121,10 +134,6 @@ var DinnerModel = function () {
             }
     }
 
-    // TODO: What the fuck is this?
-    this.getAllDishesHello = function () {
-        return $(dishes);
-    }
 
         //function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
         //you can use the filter argument to filter out the dish by name or ingredient (use for search)
@@ -149,7 +158,7 @@ var DinnerModel = function () {
 
         // Returns image of dish
         this.getImage = function (dish) {
-            return "meatballs.jpg";
+            return dish.image;
         }
 
         // Returns name of dish
@@ -188,6 +197,9 @@ var DinnerModel = function () {
             return cost;
         }
 
+        this.getDetailsDishID = function () {
+            return detailsDishID;
+        }
         
         // the dishes variable contains an array of all the 
         // dishes in the database. each dish has id, name, type,
@@ -200,7 +212,7 @@ var DinnerModel = function () {
         var dishes = [{
             'id': 0,
             'name': "",
-            'image': "",
+            'image': "toast.jpg",
             'despription': "",
             'ingredients':[]
         }

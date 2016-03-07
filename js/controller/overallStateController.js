@@ -23,7 +23,7 @@ var OverallStateController = function (model) {
         }
         else if (state == "detailsSide") {
             // Show sideview and detailsView
-            console.log("detailsSide!!");
+            
 
             $("#indexView").hide();
             $("#sideView").show();
