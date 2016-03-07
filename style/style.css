@@ -22,7 +22,8 @@ body {
 }
 
 .smvertcont {
-    margin: 50px;
+    margin-top: 0px;
+    padding-left: 40px;
     padding-bottom: 40px;
     background-color: #EDEDED;
     border-top-left-radius: 1em;

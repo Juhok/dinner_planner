@@ -108,8 +108,7 @@
 
 
 
-   <input id="confirmDinner" class="btn btn-default routing" type="button" value="Confirm Dinner" data-state="overview">
-
+   <input id="confirmDinner" class="btn btn-primary routing" type="button" value="Confirm Dinner" data-state="overview">
 
 
 
@@ -203,7 +202,16 @@
         <li><h2>My Dinner: <span id="numberOfGuests"></span> People</h2></li>
         <li>
           <div>
-            <button id="backToSelectDish" input class="btn btn-default">
+
+
+
+            <!-- <input id="confirmDinner" class="btn btn-default routing" type="button" value="Confirm Dinner" data-state="overview"> -->
+
+            <button id="backToSelectDish" input class="btn btn-default routing" data-state="selectSide">
+
+
+
+
               <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> go back and Edit Dinner
             </button>
           </div>
@@ -214,7 +222,13 @@
       <p>Total: SEK <span id="totalPrice"></span></p>
       <hr>
       <br />
-      <input class="btn btn-default" type="button" value="Print full recipe" onclick="window.location='instructions.html';">
+
+
+
+      <input id="printRecipeButton" class="btn btn-success routing" type="button" value="Print full recipe" data-state="instructions">
+
+
+
       <br />
       <br />
     </div>
@@ -229,7 +243,23 @@
                     <li><h2>My Dinner: 4 People</h2></li>
                     <li>
                         <div>
-                            <button id="backToSelectDish" input class="btn btn-default" onclick="window.location='select.html';">
+
+
+
+
+
+
+                            <button id="backToOverView" input class="btn btn-default routing" data-state="overview">
+
+
+
+
+
+
+
+
+
+
                                 <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> go back and Edit Dinner
                             </button>
                         </div>
