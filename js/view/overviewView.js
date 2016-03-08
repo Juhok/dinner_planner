@@ -20,7 +20,7 @@ var OverviewView = function (container, model) {
             htmlMenu += "<div class='col-lg-2 col-sm-6 col-md-4'>"
             + "<div class='thumbnail'>"
             + "<a href='#' class='thumbnail'>"
-            + "<img src=" + "images/" + model.getDish(jsMenu[i].id).image + " alt='Mountain View'>"
+            + "<img src=" + "'images/" + model.getDish(jsMenu[i].id).image + "' alt='Mountain View'>"
             + "</a>"
             + "<div class='caption'>"
             + "<h3>" + model.getDish(jsMenu[i].id).name + "</h3>"
@@ -33,19 +33,12 @@ var OverviewView = function (container, model) {
 
     // Update function. Called from the model.
     this.update = function (model, arg) {
-
-        if (arg != 0) {
-            // Update this view
-            this.numberOfGuests.html(model.getNumberOfGuests());
-            this.menu.html(this.updateHtmlMenu(model));
-            this.totalPrice.html(model.getTotalMenuPrice());
-        }
-        else if (arg == "overViewview") {
-            // Update this view
-            this.numberOfGuests.html(model.getNumberOfGuests());
-            this.menu.html(this.updateHtmlMenu(model));
-            this.totalPrice.html(model.getTotalMenuPrice());
-        }
+           console.log("Overviewview UPDATED!")
+           // Update this view
+           this.numberOfGuests.html(model.getNumberOfGuests());
+           this.menu.html(this.updateHtmlMenu(model));
+           this.totalPrice.html(model.getTotalMenuPrice());
+        
     }
 
 
