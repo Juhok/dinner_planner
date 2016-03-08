@@ -24,16 +24,6 @@
     <div class="col-md-6 smvertcont">
      <h2>A Home Dinner Service</h2>
      <hr>
-
-     <div id="exampleView">
-      <div>
-       Number of guests: <span id="numberOfGuests"></span>
-     </div>
-     <div>
-       <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-       <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-     </div>
-   </div>
      
      <span id="paragraph"></span>
      <input id="createDinner"  class="btn btn-default routing" type="button" value="Create new dinner" data-state="selectSide">
@@ -72,7 +62,7 @@
           <td ><h5>Cost</h5></td>
         </tr>
       </thead>
-      <tbody id="dishCell">
+      <tbody id="dishCell" class="routing">
       </tbody>
     </table>
     <hr>

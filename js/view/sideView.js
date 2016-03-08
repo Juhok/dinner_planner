@@ -8,38 +8,19 @@ var SideView = function (container, model) {
     this.dishCell = container.find("#dishCell");
     this.ConfirmDinner = container.find("#confirmDinner");
 
-
-
-    // new code from JUHO
-    // new code from JUHO 
-    // new code from JUHO
-
     this.numberOfGuests = container.find('#numberOfGuests');
     this.plusButton = container.find("#plusGuest"); 
     this.minusButton = container.find("#minusGuest");
     this.numberOfGuests.html(model.getNumberOfGuests());
 
 
-    // View 1/6
-    // Implement in Screen for index (Home)
-
-// here are some code I tried to make the plus and minus buttons working, Juho
-
-    // Nice. I added the buttons to the update function /Martin
-    
-
-    // new code from JUHO ENDS
-    // new code from JUHO ENDS
-    // new code from JUHO ENDS
- 
-    
-    
     // Add this view as an observer to the array "observers" in the model
     model.addObserver(this);
 
     var jsMenu;
     var htmlMenu = "";
     this.updateHtmlMenu = function (model) {
+
         htmlMenu = "";
         jsMenu = model.getFullMenu();
         
@@ -53,8 +34,6 @@ var SideView = function (container, model) {
         return htmlMenu;
     }
     
-
-
 
     // Update function. Called from the model.
     this.update = function (model, arg) {
@@ -76,7 +55,7 @@ var SideView = function (container, model) {
             this.totalCost.html(model.getTotalMenuPrice());
             this.dishCell.html(this.updateHtmlMenu(model));
         }
-        else if (arg == "removeDish") {
+        else if (arg == "dishRemoved") {
             // Update this view
             this.totalCost.html(model.getTotalMenuPrice());
             this.dishCell.html(this.updateHtmlMenu(model));

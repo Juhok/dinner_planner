@@ -62,12 +62,6 @@ var SelectViewController = function (view, model) {
         self.updateRouting();
     });
     
-    
-    console.log($(".routing[id]"));
-    console.log($("#dishItem .routing[id]"));
-    console.log($(".dishItem .routing[id]"));
-
-    
 
 
 }
