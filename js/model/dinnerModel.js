@@ -43,6 +43,7 @@ var DinnerModel = function () {
     this.updateDetails = function (id) {
         console.log("Model updateDetails: "+id)
         detailsDishID = id;
+
         this.notifyObservers("detailsDish");
     }
 
