@@ -11,7 +11,7 @@ var OverviewView = function (container, model) {
 
     model.addObserver(this);
 
-    this.updateHtmlMenu = function () {
+    this.updateHtmlMenu = function (model) {
         var htmlMenu = "";
         var jsMenu = model.getFullMenu();
 
@@ -31,20 +31,19 @@ var OverviewView = function (container, model) {
         }
     }
 
-
     // Update function. Called from the model.
     this.update = function (model, arg) {
 
-        if (arg == "setNumberOfGuests" || arg == "newMenu") {
+        if (arg != 0) {
             // Update this view
             this.numberOfGuests.html(model.getNumberOfGuests());
-            this.menu.html(this.updateHtmlMenu());
+            this.menu.html(this.updateHtmlMenu(model));
             this.totalPrice.html(model.getTotalMenuPrice());
         }
         else if (arg == "overViewview") {
             // Update this view
             this.numberOfGuests.html(model.getNumberOfGuests());
-            this.menu.html(this.updateHtmlMenu());
+            this.menu.html(this.updateHtmlMenu(model));
             this.totalPrice.html(model.getTotalMenuPrice());
         }
     }
