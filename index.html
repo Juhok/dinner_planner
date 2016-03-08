@@ -8,30 +8,23 @@
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
    <link rel="stylesheet" href="style/style.css">
-   <style>
-   #div1 {width:200px;height:70px;padding:10px;border:1px solid #aaaaaa;}
-   </style>
-</head>
-<body>
-	<nav class="navbar navbar-default">
-		<div class="container">
-			<a class="navbar-brand routing" data-state="home">HOMELETTE</a> <h3> <h5> From the best chefs in the world directly into your kitchen </h5>  </h3>
-		</div>
-	</nav>
-	<!-- first page starts -->
-  <div id="indexView">
-   <div class="row">
-    <div class="col-md-6 smvertcont">
-     <h2>A Home Dinner Service</h2>
-     <hr>
-
-     
-     <span id="paragraph"></span>
-     <input id="createDinner"  class="btn btn-default routing" type="button" value="Create new dinner" data-state="selectSide">
-     <br />
-     <br />
+ </head>
+ <body>
+   <nav class="navbar navbar-default">
+    <div class="container">
+     <a href="#" class="navbar-brand routing" data-state="home">HOMELETTE</a> <h3> <h5> From the best chefs in the world directly into your kitchen </h5>  </h3>
+   </div>
+ </nav>
+ <!-- first page starts -->
+ <div id="indexView">
+  <div class="col-xs-12 col-md-6 smvertcontselect">
+   <h2>A Home Dinner Service</h2>
+   <hr>
+   <span id="paragraph"></span>
+   <input id="createDinner"  class="btn btn-default routing" type="button" value="Create new dinner" data-state="selectSide">
+   <br />
+   <br />
  </div>
-</div>
 </div>
 <!-- first page ends -->
 <!-- sideview starts -->
@@ -41,40 +34,37 @@
     <ul class="list-inline">
       <li><h4>People</h4></li>
       <li>
-     
-     <div id="exampleView">
-      <div>
-       Number of guests: <span id="numberOfGuests"></span>
+       <div id="exampleView">
+        <div>
+         Number of guests: <span id="numberOfGuests"></span>
+       </div>
+       <div>
+         <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+         <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+       </div>
      </div>
-     <div>
-       <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-       <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-     </div>
-   </div>
-
-
-      </li>
-    </ul>  
-    <hr>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <td ><h5>Dish Name</h5></td>
-          <td ><h5>Cost</h5></td>
-        </tr>
-      </thead>
-      <tbody id="dishCell">
-      </tbody>
-    </table>
-    <hr>
-    <div>
-     <ul class="list-inline">
-       <li class="pull-right"><p>SEK</p></li>
-       <li class="pull-right"><p> <span id="totalCost"></span> </p></li>
-     </ul>
-   </div>
-   <input id="confirmDinner" class="btn btn-primary routing" type="button" value="Confirm Dinner" data-state="overview">
- </div>
+   </li>
+ </ul>  
+ <hr>
+ <table class="table table-bordered">
+  <thead>
+    <tr>
+      <td ><h5>Dish Name</h5></td>
+      <td ><h5>Cost</h5></td>
+    </tr>
+  </thead>
+  <tbody id="dishCell">
+  </tbody>
+</table>
+<hr>
+<div>
+ <ul class="list-inline">
+   <li class="pull-right"><p>SEK</p></li>
+   <li class="pull-right"><p> <span id="totalCost"></span> </p></li>
+ </ul>
+</div>
+<input id="confirmDinner" class="btn btn-primary routing" type="button" value="Confirm Dinner" data-state="overview">
+</div>
 </div>
 <!-- sideview ends -->
 <!-- selectview starts -->
@@ -92,14 +82,13 @@
         </div><!-- /input-group -->
       </div><!-- /.col-lg-3 -->
       <div class="btn-group">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Browse Menus  
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><span id ="starterSelect">Starter</span></li>
-          <li><span id="mainDishSelect">Main Dish</span></li>
-          <li><span id="dessertSelect">Dessert</span></li>
+          <li><a href="#"><span id ="starterSelect">Starter</span></a></li>
+          <li><a href="#"><span id="mainDishSelect">Main Dish</span></a></li>
+          <li><a href="#"><span id="dessertSelect">Dessert</span></a></li>
         </ul>
       </div>
     </form>
@@ -159,16 +148,7 @@
         <li><h2>My Dinner: <span id="numberOfGuests"></span> People</h2></li>
         <li>
           <div>
-
-
-
-            <!-- <input id="confirmDinner" class="btn btn-default routing" type="button" value="Confirm Dinner" data-state="overview"> -->
-
             <button id="backToSelectDish" input class="btn btn-default routing" data-state="selectSide">
-
-
-
-
               <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> go back and Edit Dinner
             </button>
           </div>
@@ -179,13 +159,7 @@
       <p>Total: SEK <span id="totalPrice"></span></p>
       <hr>
       <br />
-
-
-
       <input id="printRecipeButton" class="btn btn-success routing" type="button" value="Print full recipe" data-state="instructions">
-
-
-
       <br />
       <br />
     </div>
@@ -200,30 +174,13 @@
         <li><h2>My Dinner: 4 People</h2></li>
         <li>
           <div>
-
-
-
-
-
-
             <button id="backToOverView" input class="btn btn-default routing" data-state="overview">
-
-
-
-
-
-
-
-
-
-
               <span class="glyphicon glyphicon-backward" aria-hidden="true"></span> go back and Edit Dinner
             </button>
           </div>
         </li>
       </ul>
       <hr>
-
       <div class="row">
         <div class="col-md-6">
           <div class="row">
@@ -282,7 +239,6 @@
 <script src="js/app.js"></script>
 <script src="js/model/dinnerModel.js"></script>
 <script src="js/view/exampleView.js"></script>
-<script src="js/view/sideMenuView.js"></script>
 <script src="js/view/sideView.js"></script>
 <script src="js/view/selectView.js"></script>
 <script src="js/view/detailsView.js"></script>
