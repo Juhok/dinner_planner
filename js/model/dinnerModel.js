@@ -135,9 +135,30 @@ var DinnerModel = function () {
             }
     }
 
-        //function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
-        //you can use the filter argument to filter out the dish by name or ingredient (use for search)
-        //if you don't pass any filter all the dishes will be returned
+
+        // LAB 4 this function gets all the data 1. Use the bigOvenData API instead
+        // LAB 4 this function gets all the data 1. Use the bigOvenData API instead
+        // LAB 4 this function gets all the data 1. Use the bigOvenData API instead
+        // LAB 4 this function gets all the data 1. Use the bigOvenData API instead
+        // LAB 4 this function gets all the data 1. Use the bigOvenData API instead
+        // LAB 4 this function gets all the data 1. Use the bigOvenData API instead
+        // LAB 4 this function gets all the data 1. Use the bigOvenData API instead
+        // LAB 4 this function gets all the data 1. Use the bigOvenData API instead
+        // As we want our application to be modern, web 2.0 application, 
+        // we do not want our code to block the application while it gets the data from the web service. 
+        // Therefore, we will use AJAX to issue asynchronous calls. 
+        // Check out the lecture notes to reminder yourself about asynchronous calls. 
+
+        // You should update the getAllDishes and getDish function to use BigOven Recipe search API
+
+        //  To be consistent with the rest of the application the best way to solve this 
+        // problem is using the Observer pattern once again. Therefore, in the "success" 
+        // callback of the AJAX call we want to call "notifyObservers" so that the views can update themselves with the correct data. Even if you didn't pass any arguments to notifyObservers in the previous labs, 
+        // now it is time to do so. We want to pass the data we received from the service. 
+        
+        // function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
+        // you can use the filter argument to filter out the dish by name or ingredient (use for search)
+        // if you don't pass any filter all the dishes will be returned
         this.getAllDishes = function (type, filter) {
             return $(dishes).filter(function (index, dish) {
                 var found = true;
