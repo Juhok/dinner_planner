@@ -1,5 +1,23 @@
 //ExampleViewController Object constructor
-var SelectViewController = function(view, model) {
+var SelectViewController = function (view, model) {
+
+    // Changes the type of dishes displayed
+    view.starterSelect.click(function () {
+        view.setType('starter');
+        console.log("selectView starter clicked");
+        model.notifyObservers("selectView dropDown");
+    });
+    view.mainDishSelect.click(function () {
+        view.setType('main dish');
+        console.log("selectView main dish clicked");
+        model.notifyObservers("selectView dropDown");
+    });
+    view.dessertSelect.click(function () {
+        view.setType('dessert');
+        console.log("selectView dessert clicked");
+        model.notifyObservers("selectView dropDown");
+    });
+    
  
     //TODO: Get the dropdownmenu to change the type
     var dishes = 0;
