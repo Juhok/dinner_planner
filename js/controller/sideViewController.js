@@ -12,9 +12,9 @@ var SideViewController = function(view, model) {
     
 
     var jsMenu = 0;
-
     var self = this;
     $(".routing[id]").on("click", function () {
+        jsMenu = view.getDishes();
         var id = $(this).attr("id");
         console.log("sideView Controller. ID:" + id);
 

@@ -23,8 +23,6 @@ var OverallStateController = function (model) {
         }
         else if (state == "detailsSide") {
             // Show sideview and detailsView
-            
-
             $("#indexView").hide();
             $("#sideView").show();
             $("#selectView").hide();
@@ -69,7 +67,7 @@ var OverallStateController = function (model) {
     var self = this;
     $(".routing[data-state]").on("click", function () {
         var state = $(this).attr("data-state");
-
+        console.log("STATE:" + state)
         self.showState(state);
     });
     //<button class="routing" data-state="home">Go to home</button>

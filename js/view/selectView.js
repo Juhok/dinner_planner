@@ -11,16 +11,17 @@ var SelectView = function (container, model) {
     this.dessertSelect = container.find("#dessertSelect");
 
 
+    this.setType = function (newType) {
+        type = newType;
+    };
+
     var htmlDishes;
     var type = 'main dish'; // Start type
     var dishes;
 
     model.addObserver(this);
 
-    this.setType = function (newType) {
-        type = newType;
-    };
-
+    //this.createDishSelection(model);
 
     this.createDishSelection = function (model) {
         htmlDishes = "";
@@ -31,7 +32,7 @@ var SelectView = function (container, model) {
             //TODO: Create button to that does 1) update overallstatecontroller to show detailsview 2) update details id.
             htmlDishes += "<div class='col-lg-2 col-sm-6 col-md-4>'"
             + "<div class='thumbnail'>"
-            + "<button type='button' button class='btn btn-default routing' data-state='detailsSide' id='" + dishes[i].id + "'>"
+            + "<button type='button' button class='btn btn-default routing' data-state='detailsSide' input id='" + dishes[i].id + "'>"
             + "<img src='images/" + dishes[i].image + "'/>"
             + "</button>"
             + "<div class='caption'>"
@@ -39,7 +40,7 @@ var SelectView = function (container, model) {
             + "<p>" + dishes[i].description + "</p>"
             + "</div>"
             + "</div>"
-            console.log(dishes[i].id);
+            
         }
 
         // Add the possible dishes to index.html
@@ -51,7 +52,7 @@ var SelectView = function (container, model) {
     
     // Update function. Called from the model.
     this.update = function (model, arg) {
-        if (arg == "setNumberOfGuests" || arg == "newMenu" || arg == "selectView dropDown") {
+        if (arg == "selectView dropDown") {
             console.log("In selectView update function");
             this.createDishSelection(model);
         }
@@ -62,9 +63,7 @@ var SelectView = function (container, model) {
     this.getDishes = function () {
         return dishes;
     }
-    this.getButtonArray = function () {
-        return buttonArray;
-    }
+    
 
 }
  

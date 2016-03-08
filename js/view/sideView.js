@@ -17,46 +17,27 @@ var SideView = function (container, model) {
     this.numberOfGuests = container.find('#numberOfGuests');
     this.plusButton = container.find("#plusGuest"); 
     this.minusButton = container.find("#minusGuest");
-
-
-    // create dinner button integration
-
-
-
     this.numberOfGuests.html(model.getNumberOfGuests());
 
 
     // View 1/6
     // Implement in Screen for index (Home)
 
-
-
 // here are some code I tried to make the plus and minus buttons working, Juho
-    
-    this.update = function(model, arg) {
-        
-        if (arg == "newGuestsNumber"){
-            this.numberOfGuests.html(model.getNumberOfGuests());
-        }
-        if (arg == "newMenu"){
-            this.updateTable();
-        }
-    }
 
-    console.log("i am here");
-    model.addObserver(this);
+    // Nice. I added the buttons to the update function /Martin
+    
 
     // new code from JUHO ENDS
     // new code from JUHO ENDS
     // new code from JUHO ENDS
  
-
-    // Array that will hold container.find for all buttons created in the dishItem loop
-    this.buttonArray = [];
+    
+    
     // Add this view as an observer to the array "observers" in the model
     model.addObserver(this);
 
-    var jsMenu = model.getFullMenu();
+    var jsMenu;
     var htmlMenu = "";
     this.updateHtmlMenu = function (model) {
         htmlMenu = "";
@@ -66,25 +47,13 @@ var SideView = function (container, model) {
         for (var i = 0; i < jsMenu.length; i++) {
             htmlMenu += "<tr>" + "<td>" + model.getDish(jsMenu[i].id).name + "</td>"
             + "<td>" + model.getDishCost(jsMenu[i].id) + "</td>" 
-            + "<td>" + "<input type='button' class='btn btn-danger btn-xs routing' value='X' id='" +jsMenu[i].id+1000+ "'></td>"
+            + "<td>" + "<input type='button' class='btn btn-danger btn-xs routing' value='X' id='" +jsMenu[i].id+ "'></td>"
             + "</tr>";
-            
-            // Add a variable to a buttonArray
-            this.buttonArray.push(jsMenu[i].id);
         }
         return htmlMenu;
     }
     
 
-    // Set all variables in the buttonArray to corresponding ID in index.html
-    for (i = 0; i < this.buttonArray.length; i++) {
-        this.buttonArray[i] = container.find("#" + jsMenu[i].id);
-        console.log(this.buttonArray[i]);
-    }
-
-    // Sets the initial values
-    this.totalCost.html(model.getTotalMenuPrice());
-    this.dishCell.html(htmlMenu);
 
 
     // Update function. Called from the model.
@@ -93,6 +62,7 @@ var SideView = function (container, model) {
         if (arg == "setNumberOfGuests" || arg == "newMenu") {
 
             // Update this view
+            this.numberOfGuests.html(model.getNumberOfGuests());
             this.totalCost.html(model.getTotalMenuPrice());
             this.dishCell.html(this.updateHtmlMenu(model));
         }
@@ -118,9 +88,7 @@ var SideView = function (container, model) {
     this.getDishes = function () {
         return jsMenu;
     }
-    this.getButtonArray = function () {
-        return buttonArray;
-    }
+    
 
 
 
