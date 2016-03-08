@@ -11,7 +11,6 @@ var OverviewView = function (container, model) {
 
     model.addObserver(this);
 
-
     this.updateHtmlMenu = function () {
         var htmlMenu = "";
         var jsMenu = model.getFullMenu();
@@ -31,7 +30,6 @@ var OverviewView = function (container, model) {
             + "</div>";
         }
     }
-
 
 
     // Update function. Called from the model.

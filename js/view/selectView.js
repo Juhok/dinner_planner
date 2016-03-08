@@ -10,8 +10,6 @@ var SelectView = function (container, model) {
 
     var dishItemString = container.find('#dishItem').tostring;
 
-
-
     this.starterSelect = container.find("#starterSelect");
     this.mainDishSelect = container.find("#mainDishSelect");
     this.dessertSelect = container.find("#dessertSelect");
