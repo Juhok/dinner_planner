@@ -6,10 +6,19 @@ var SelectView = function (container, model) {
 
     this.dishItem = container.find("#dishItem");
     
+    console.log("dishItem" +dishItem);
+
+    var dishItemString = container.find('#dishItem').tostring;
+
+
+
     this.starterSelect = container.find("#starterSelect");
     this.mainDishSelect = container.find("#mainDishSelect");
     this.dessertSelect = container.find("#dessertSelect");
 
+    this.getDishItem = function () {
+        return this.dishItem;
+    }
 
     this.setType = function (newType) {
         type = newType;
@@ -42,9 +51,7 @@ var SelectView = function (container, model) {
             + "</div>"
             
         }
-
-        // Add the possible dishes to index.html
-        this.dishItem.html(htmlDishes);
+        return htmlDishes;
 
     }
 
@@ -54,7 +61,7 @@ var SelectView = function (container, model) {
     this.update = function (model, arg) {
         if (arg == "selectView dropDown") {
             console.log("In selectView update function");
-            this.createDishSelection(model);
+            this.dishItem.html(this.createDishSelection(model));
         }
     }
 
