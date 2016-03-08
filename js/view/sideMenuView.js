@@ -28,7 +28,7 @@ var sideMenuView = function (container, model) {
 	// "<li class="pull-right"><p> <span id="totalCost"></span></p></li>"+
 	// "</ul>"+
 	// "</div>"+
-	// "</div>";
+	// "</div>";  
 
 	
 

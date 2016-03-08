@@ -1,5 +1,16 @@
 var SideViewController = function(view, model) {
 
+
+    view.plusButton.click(function(){
+    model.setNumberOfGuests(1);
+    });
+
+
+    view.minusButton.click(function(){
+    model.setNumberOfGuests(-1);
+    });
+    
+
     var jsMenu = 0;
 
     var self = this;
@@ -18,5 +29,7 @@ var SideViewController = function(view, model) {
         }
 
     });
+
+
 
 }
