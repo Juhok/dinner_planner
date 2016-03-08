@@ -9,7 +9,6 @@
    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
    <link rel="stylesheet" href="style/style.css">
    <style>
-   #div1 {width:200px;height:70px;padding:10px;border:1px solid #aaaaaa;}
    </style>
 </head>
 <body>
@@ -20,17 +19,14 @@
 	</nav>
 	<!-- first page starts -->
   <div id="indexView">
-   <div class="row">
-    <div class="col-md-6 smvertcont">
+    <div class="col-xs-12 col-md-6 smvertcontselect">
      <h2>A Home Dinner Service</h2>
      <hr>
-     
      <span id="paragraph"></span>
      <input id="createDinner"  class="btn btn-default routing" type="button" value="Create new dinner" data-state="selectSide">
      <br />
      <br />
  </div>
-</div>
 </div>
 <!-- first page ends -->
 <!-- sideview starts -->
@@ -91,14 +87,13 @@
         </div><!-- /input-group -->
       </div><!-- /.col-lg-3 -->
       <div class="btn-group">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Browse Menus  
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><span id ="starterSelect">Starter</span></li>
-          <li><span id="mainDishSelect">Main Dish</span></li>
-          <li><span id="dessertSelect">Dessert</span></li>
+          <li><a href="#"><span id ="starterSelect">Starter</span></a></li>
+          <li><a href="#"><span id="mainDishSelect">Main Dish</span></a></li>
+          <li><a href="#"><span id="dessertSelect">Dessert</span></a></li>
         </ul>
       </div>
     </form>
