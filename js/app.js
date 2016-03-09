@@ -21,7 +21,7 @@ $(function() {
 
 	var overviewView = new OverviewView($("#overviewView"), model); // View 5, Overview screen
 
-	var intructionsView = new InstructionsView($("#instructionsView"), model); // View 6, Instructions screen
+	var instructionsView = new InstructionsView($("#instructionsView"), model); // View 6, Instructions screen
 
 	var overallStateController = new OverallStateController(model); // Controller which views are displayed
 

@@ -17,7 +17,7 @@ var SideViewController = function(view, model) {
             var id = $(this).attr("id");
             console.log(id);
 
-            if (id >= 0) {
+            if (id > 0) {
                 for (i = 0; i < jsMenu.length; i++) {
                     if (jsMenu[i].id == id) {
                         console.log("REMOVING DISH FROM MENU")

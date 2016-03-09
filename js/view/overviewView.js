@@ -29,6 +29,7 @@ var OverviewView = function (container, model) {
             + "</div>"
             + "</div>";
         }
+        return htmlMenu;
     }
 
     // Update function. Called from the model.
